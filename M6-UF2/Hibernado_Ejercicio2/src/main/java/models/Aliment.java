@@ -22,7 +22,7 @@ public class Aliment {
 	@Column(name = "nom", length = 50, nullable = false)
 	private String nom;
 	
-	@Column(name = "nom", length = 50, nullable = false)
+	@Column(name = "descripcio", length = 50, nullable = false)
 	private String descripció;
 	
 	@Column(name = "gana", columnDefinition = "double(6,2)")
@@ -31,15 +31,14 @@ public class Aliment {
 	@OneToMany(mappedBy = "aliment")
 	private Set<Tamagotchi> tamaList = new HashSet<Tamagotchi>();
 
-	public void Aliment(int id, String n, String des, int valor) {
+	public Aliment(String n, String des, double valor) {
 
-		this.id = id;
 		this.nom = n;
 		this.descripció = des;
 		this.valorNutricional = valor;
 	}
 
-	public void Aliment() {
+	public Aliment() {
 
 	}
 

@@ -21,5 +21,8 @@
 		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
 		<!-- AQUI POSEU LES CLASSES QUE REPRESENTEN TAULES QUE FEU SERVIR -->
 		<mapping class="models.Tamagotchi"/>	
+		<mapping class="models.Aliment"/>	
+		<mapping class="models.Joguina"/>	
+		<mapping class="models.Etapa"/>	
 	</session-factory>
 </hibernate-configuration>

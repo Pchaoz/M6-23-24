@@ -10,6 +10,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
+import models.Aliment;
 import models.Etapa;
 import models.Tamagotchi;
 
@@ -54,32 +55,41 @@ public class Main {
 		
 		session.getTransaction().commit();
 		
-		session.beginTransaction(); //SEGUNDA TRANSACCION - RECUPERAR AL TAMAGOTCHI CON ID 1 Y MODIFICARLO
+		//EJERCICI 2
 		
-		Tamagotchi tama1 = session.find(Tamagotchi.class, 1); //RECUPEREM EL QUE TE LA ID 1
-		System.out.println("SOY EL PRIVILEGIADO QUE TIENE LA ID 1: " + tama1.toString()); //EL MOSRTREM PER PANTALLA
+		//CREACIO ALIMENTS
+		session.beginTransaction();
 		
-		tama1.setNom("Updategotchi"); //L'HI MODIFIQUEM EL NOM
+		Aliment a1 = new Aliment("Poma", "Apple ho aprova", 20);
+		Aliment a2 = new Aliment("Xocolata", "Amb atmelles", 5.72);
+		Aliment a3 = new Aliment("Pera", "ES peracular", 25.60);
+		Aliment a4 = new Aliment("Pollaste", "Amb llimona", 50);
+
+		session.persist(a1);
+		session.persist(a2);
+		session.persist(a3);
+		session.persist(a4);
 		
-		session.getTransaction().commit(); //FEM COMMIT PER APLICAR ELS CAMBIS
+		session.getTransaction().commit();
 		
-		session.beginTransaction();  //SEGUNDA TRANSACCION - MOSTRAR TOTS ELS TAMAGOTCHIS
+		//CREACCIO AMICS
+		session.beginTransaction();
+		
+		tm1.agregarAmic(tm2);
+		tm2.agregarAmic(tm1);
+		tm3.agregarAmic(tm1);
+		tm3.agregarAmic(tm2);
+		
+		session.merge(tm2);
+		session.merge(tm1);
+		session.merge(tm3);
+
+		session.getTransaction().commit();
+		
+		session.beginTransaction(); //PER MOSTRARLOS
 		
 		List<Tamagotchi> allTama = session.createQuery("from Tamagotchi").getResultList(); //AGAFEM A LO LOCO TOTS ELS TAMAGOTCHIS
-		System.out.println(allTama);
-		
-		for (Tamagotchi t : allTama) {
-			
-			if (t.getId() == 1) {
-				session.remove(t);
-			}
-		}
-		
-		session.getTransaction().commit(); //FEM COMMIT PER APLICAR ELS CAMBIS
-		
-		session.beginTransaction();  //TERCE TRANSACCION - MOSTRAR TOTS ELS TAMAGOTCHIS PERO ACTUALIZADA
-		
-		allTama = session.createQuery("from Tamagotchi").getResultList(); //AGAFEM A LO LOCO TOTS ELS TAMAGOTCHIS
+		System.out.println("LLISTA TAMAGOTCHI ACTUALIZADA AMB AMICS: ");
 		System.out.println(allTama);
 		
 		session.getTransaction().commit();

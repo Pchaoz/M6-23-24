@@ -1,16 +1,22 @@
 package models;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -53,6 +59,14 @@ public class Tamagotchi {
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="id_joguina", unique = true)
 	private Joguina joguina;
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name="TamaAmics", //NOM COLUMNA 
+			joinColumns = @JoinColumn(name="id_tama"), //NOM CLAU QUE PORTA EL PES
+			inverseJoinColumns = @JoinColumn(name="id_amic") //NOM DE LA CLAU QUE NO PORTA EL PES
+	)
+	private Set<Tamagotchi> amics = new HashSet<Tamagotchi>();
 
 	public Tamagotchi() {
 
@@ -144,12 +158,30 @@ public class Tamagotchi {
 	public void setDataNaixement(LocalDateTime dataNaixement) {
 		this.dataNaixement = dataNaixement;
 	}
+	
+	public void agregarAmic (Tamagotchi frien) {
+		//FRIEN :>
+		this.amics.add(frien);
+	}
 
 	@Override
 	public String toString() {
-		return "Tamagotchi [id=" + id + ", nom=" + nom + ", descripcio=" + descripcio + ", gana=" + gana + ", viu="
-				+ viu + ", felicitat=" + felicitat + ", etapa=" + etapa + ", dataNaixement=" + dataNaixement + "]";
+		String customString = "";
+		
+		customString = "[Nom: " + this.nom + " Descripccio: " + this.descripcio + 
+					" Gana: " + this.gana + " Viu: " + this.viu + " Felicitat: "  + this.felicitat
+					+ " Etapa: " + this.etapa + " Data Naixament: " + this.dataNaixement + " Amics: ";
+		
+		Iterator<Tamagotchi> frien = this.amics.iterator(); 
+		while (frien.hasNext()) {
+			customString = customString + frien.next().getNom() + " ";
+		}
+		customString = customString + "]";
+		
+		return customString;
 	}
+
+	
 	
 }
 
