@@ -47,7 +47,13 @@ public class GenericDAO <T, ID extends Serializable> implements InterDAOGeneric<
 	@Override
 	public void delete(ID id) {
 		
+		Session session = Utils.getSessionFactory().getCurrentSession();
+		session.getTransaction().begin();
 		
+		T entityToDelete = session.find(entityClass, id);
+		session.remove(entityToDelete);
+		
+		session.getTransaction().commit();
 	}
 
 	/*
@@ -56,15 +62,28 @@ public class GenericDAO <T, ID extends Serializable> implements InterDAOGeneric<
 	@Override
 	public void update(T entity) {
 		
+		Session session = Utils.getSessionFactory().getCurrentSession();
+		session.getTransaction().begin();	
 		
+		session.merge(entity);
+		
+		session.getTransaction().commit();
+
 	}
 	/*
 	 * METODO PARA LISTAR TODAS LAS ENTIDADES GENERICO
 	 */
 	@Override
 	public List<T> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session session = Utils.getSessionFactory().getCurrentSession();
+		session.getTransaction().begin();
+		
+		List<T> registres = session.createQuery("FROM "+entityClass.getName()).getResultList();
+		
+		session.getTransaction().commit();
+		return registres;
+
 	}
 	
 	/*
@@ -72,8 +91,14 @@ public class GenericDAO <T, ID extends Serializable> implements InterDAOGeneric<
 	 */
 	@Override
 	public T find(ID id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session session = Utils.getSessionFactory().getCurrentSession();
+		session.getTransaction().begin();
+		
+		T entity = session.find(entityClass, id);
+		
+		session.getTransaction().commit();
+		return entity;
 	}
 
 }

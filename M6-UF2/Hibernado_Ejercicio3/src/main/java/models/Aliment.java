@@ -11,6 +11,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ * @author IES SABADELL
+ *
+ */
+/**
+ * @author IES SABADELL
+ *
+ */
 @Entity
 @Table(name = "Aliments")
 public class Aliment {
@@ -72,6 +80,14 @@ public class Aliment {
 
 	public void setValorNutricional(int valorNutricional) {
 		this.valorNutricional = valorNutricional;
+	}
+
+	public Set<Tamagotchi> getTamaList() {
+		return tamaList;
+	}
+
+	public void setTamaList(Set<Tamagotchi> tamaList) {
+		this.tamaList = tamaList;
 	}
 
 	@Override
