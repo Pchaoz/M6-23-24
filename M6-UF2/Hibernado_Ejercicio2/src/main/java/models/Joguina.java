@@ -29,9 +29,8 @@ public class Joguina {
 	@OneToOne(mappedBy = "joguina", cascade = CascadeType.PERSIST)
 	private Tamagotchi tama;
 	
-	public Joguina(int id, String nom, String descripcio, int nivellDiversio) {
+	public Joguina( String nom, String descripcio, int nivellDiversio) {
 		super();
-		this.id = id;
 		this.nom = nom;
 		this.descripcio = descripcio;
 		this.nivellDiversio = nivellDiversio;

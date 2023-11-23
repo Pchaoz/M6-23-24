@@ -163,6 +163,22 @@ public class Tamagotchi {
 		//FRIEN :>
 		this.amics.add(frien);
 	}
+	
+	public Aliment getAliment() {
+		return aliment;
+	}
+
+	public void setAliment(Aliment aliment) {
+		this.aliment = aliment;
+	}
+
+	public Joguina getJoguina() {
+		return joguina;
+	}
+
+	public void setJoguina(Joguina joguina) {
+		this.joguina = joguina;
+	}
 
 	@Override
 	public String toString() {
@@ -170,7 +186,8 @@ public class Tamagotchi {
 		
 		customString = "[Nom: " + this.nom + " Descripccio: " + this.descripcio + 
 					" Gana: " + this.gana + " Viu: " + this.viu + " Felicitat: "  + this.felicitat
-					+ " Etapa: " + this.etapa + " Data Naixament: " + this.dataNaixement + " Amics: ";
+					+ " Etapa: " + this.etapa + " Data Naixament: " + this.dataNaixement 
+					+ " Aliment: " + this.aliment + " Joguina: " + this.joguina + " Amics: ";
 		
 		Iterator<Tamagotchi> frien = this.amics.iterator(); 
 		while (frien.hasNext()) {
