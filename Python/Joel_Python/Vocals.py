@@ -22,3 +22,4 @@ while i < cases:
         x = x+1
 
     print("A: " + str(d1['a']) + " E: " + str(d1['e']) + ' I: ' + str(d1['i']) + " O: " + str(d1['o']) +  " U: " + str(d1['u']))
+    i = i+1

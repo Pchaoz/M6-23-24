@@ -14,3 +14,4 @@ while i < cases:
 
     phraseChar.sort()
     print(''.join(phraseChar))
+    i = i+1
