@@ -22,6 +22,5 @@ public class Main {
 
 		JoguinesDAO jDAO = new JoguinesDAO();
 		
-		
 	}
 }
