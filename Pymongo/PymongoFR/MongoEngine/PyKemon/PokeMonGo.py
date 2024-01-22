@@ -27,27 +27,31 @@ while True:
         if userOption[0].lower() == "search":
             print("Search..")
             if contains_int(userOption[1]):
-                print("BUSQUEDA POR NUMERO")
+                #print("BUSQUEDA POR NUMERO")
                 pokemon = collection.find_one({"num": userOption[1]})
                 if len(userOption) < 2:
                     pprint(pokemon)
                 else:
                     if userOption[2].lower() == "evol":
+                        evolves = ""
                         for poke in pokemon["next_evolution"]:
-                            print(poke["name"])
+                            evolves = evolves + " " + poke["name"]
+                        print(pokemon["name"], ":", evolves)
                     else:
-                        pprint(pokemon[userOption[2]])
+                        print(pokemon["name"], ": ", pokemon[userOption[2]])
             else:
-                print("BUSQUEDA POR STRING")
+                #print("BUSQUEDA POR STRING")
                 pokemon = collection.find_one({"name": userOption[1]})
                 if len(userOption) < 2:
                     pprint(pokemon)
                 else:
                     if userOption[2].lower() == "evol":
+                        evolves = ""
                         for poke in pokemon["next_evolution"]:
-                            print(poke["name"])
+                            evolves = evolves + poke["name"]
+                        print(pokemon["name"], ":", evolves)
                     else:
-                        pprint(pokemon[userOption[2]])
+                        print(pokemon["name"], ":", pokemon[userOption[2]])
 
         elif userOption[0].lower() == "release":
             print("Release..")
@@ -62,4 +66,4 @@ while True:
         else:
             print("Error, esta opcion no existe :c")
 
-    print("EL USUARIO HA DICHO: ", userOption)
+    #print("EL USUARIO HA DICHO: ", userOption)
