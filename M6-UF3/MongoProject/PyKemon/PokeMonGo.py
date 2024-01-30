@@ -6,9 +6,8 @@ client = MongoClient("mongodb+srv://psotil:QiJLhIdJeQ9pOlk1@elclusterdefinitivo.
 # ESCOJO BASE DE DATOS
 db = client.project
 # ESCOJO COLECTION
-collection = db.pokemon
-
-notFinished = False
+collectionP = db.pokemon
+collectionT = db.team
 
 
 def contains_int(string):
@@ -27,8 +26,8 @@ while True:
         if userOption[0].lower() == "search":
             print("Search..")
             if contains_int(userOption[1]):
-                #print("BUSQUEDA POR NUMERO")
-                pokemon = collection.find_one({"num": userOption[1]})
+                # print("BUSQUEDA POR NUMERO")
+                pokemon = collectionP.find_one({"num": userOption[1]})
                 if len(userOption) < 2:
                     pprint(pokemon)
                 else:
@@ -40,8 +39,8 @@ while True:
                     else:
                         print(pokemon["name"], ": ", pokemon[userOption[2]])
             else:
-                #print("BUSQUEDA POR STRING")
-                pokemon = collection.find_one({"name": userOption[1]})
+                # print("BUSQUEDA POR STRING")
+                pokemon = collectionP.find_one({"name": userOption[1]})
                 if len(userOption) < 2:
                     pprint(pokemon)
                 else:
@@ -55,15 +54,18 @@ while True:
 
         elif userOption[0].lower() == "release":
             print("Release..")
-            if contains_int(userOption[1]):
-                print("BUSQUEDA POR NUMERO")
-            else:
-                print("BUSQUEDA POR STRING")
 
+            if contains_int(userOption[1]):
+                print("RELEASE POR NUMERO")
+                collectionT.delete_one({"num":userOption[1]})
+            else:
+                print("RELEASE POR STRING")
+                collectionT.delete_one({"name": userOption[1]})
+
+            teams = collectionT.find()
+            print("RELEASED", userOption[1])
         elif userOption[0].lower() == "exit":
             print("Ad1os... ¯\_(ツ)_/¯")
             break
         else:
             print("Error, esta opcion no existe :c")
-
-    #print("EL USUARIO HA DICHO: ", userOption)
