@@ -1,10 +1,6 @@
-from mongoengine import *
 from enum import Enum
 from datetime import datetime
 import random
-
-client = connect(host="mongodb+srv://psotil:QiJLhIdJeQ9pOlk1@elclusterdefinitivo.9cbognj.mongodb.net/project")
-
 
 # MOVES COLLECTION
 
