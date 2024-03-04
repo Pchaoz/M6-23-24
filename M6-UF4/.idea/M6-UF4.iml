@@ -1,7 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LaravelTest/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/carbonphp/carbon-doctrine-types" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/pint" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/league/flysystem-local" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/spatie/laravel-ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/polyfill-uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/uid" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/LaravelTest/vendor/webmozart/assert" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
